@@ -1,0 +1,298 @@
+/* Step8Connectors — polyline draw tool on the master schema (light theme) */
+
+.body {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+}
+
+.canvasPanel {
+  flex: 1;
+  background-color: #e5e7eb;
+  background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+  background-size: 20px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.canvasWrap {
+  background-color: #ffffff;
+  width: 90%;
+  height: 90%;
+  max-width: 900px;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+.canvasEmpty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 0.8125rem;
+}
+
+.panel {
+  width: 280px;
+  flex-shrink: 0;
+  min-width: 0;
+  background-color: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.panelTitle {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1rem 1rem 0.75rem;
+  margin: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hint {
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+  line-height: 1.55;
+}
+
+.tools {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem 0.5rem;
+}
+
+.toolBtn {
+  flex: 1;
+  padding: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #e1e4e8;
+  color: #0f172a;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  border-radius: 0;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.toolBtn:hover {
+  border-color: #f05123;
+  color: #f05123;
+}
+
+.toolBtnActive,
+.toolBtnActive:hover {
+  background: #f05123;
+  border-color: #f05123;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.brushControl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 1rem 0.75rem;
+}
+
+.brushLabel {
+  font-size: 0.75rem;
+  color: #475569;
+  flex-shrink: 0;
+}
+
+/* Thickness slider row (metres) */
+.paramRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem 0.25rem;
+}
+
+.paramLabel {
+  font-size: 0.75rem;
+  color: #475569;
+  flex-shrink: 0;
+}
+
+.sliderValue {
+  font-size: 0.75rem;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+  min-width: 44px;
+  text-align: right;
+}
+
+.paramHint {
+  padding: 0 1rem 0.5rem;
+  font-size: 0.6875rem;
+  color: #9ca3af;
+}
+
+.slider {
+  flex: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 4px;
+  background: #e1e4e8;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #f05123;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #f05123;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.brushValue {
+  font-size: 0.75rem;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+  min-width: 34px;
+  text-align: right;
+}
+
+.brushCursor {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(240, 81, 35, 0.9);
+  background: rgba(240, 81, 35, 0.08);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.connList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.connRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0;
+  font-size: 0.8125rem;
+  color: #0f172a;
+}
+
+.connDot {
+  width: 12px;
+  height: 4px;
+  background: #2563eb;
+  flex-shrink: 0;
+}
+
+.cutoutDot {
+  width: 12px;
+  height: 12px;
+  background: rgba(34, 197, 94, 0.5);
+  border: 1px solid rgba(22, 163, 74, 0.9);
+  flex-shrink: 0;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 1rem 0.75rem;
+  font-size: 0.75rem;
+  color: #475569;
+  cursor: pointer;
+}
+
+.toggleRow input {
+  cursor: pointer;
+}
+
+.toggleRow.disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.connName {
+  flex: 1;
+}
+
+.connDelete {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0 0.25rem;
+  font-size: 0.75rem;
+}
+
+.connDelete:hover {
+  color: #dc2626;
+}
+
+.saveBtn {
+  margin: 1rem 1rem 1.25rem;
+  padding: 0.625rem;
+  background: #f05123;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.saveBtn:hover:not(:disabled) {
+  background: #e05a10;
+}
+
+.saveBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.emptyHint {
+  padding: 1rem 0;
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  text-align: center;
+}

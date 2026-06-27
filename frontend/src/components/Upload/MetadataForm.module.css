@@ -1,0 +1,50 @@
+.form {
+  flex: 1;
+}
+
+.metaSection {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metaLabel {
+  text-transform: uppercase;
+  color: #888;
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.metaInput {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #333;
+  background: transparent;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.metaInput::placeholder {
+  color: #bbb;
+}
+
+.metaInput:focus {
+  border-bottom-color: #FF5722;
+}
+
+.metaRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}

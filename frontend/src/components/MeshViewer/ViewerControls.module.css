@@ -1,0 +1,45 @@
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: var(--border-radius);
+}
+
+.viewToggle {
+  display: flex;
+  gap: 4px;
+}
+
+.toggleBtn {
+  padding: 4px 12px;
+  background: transparent;
+  border: 1px solid var(--color-grey-medium);
+  border-radius: var(--border-radius);
+  color: var(--color-text-white);
+  cursor: pointer;
+  font-size: 13px;
+  transition: var(--transition);
+}
+
+.toggleBtn.active {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+}
+
+.downloadBtn {
+  padding: 4px 12px;
+  background: var(--color-grey-dark);
+  border: none;
+  border-radius: var(--border-radius);
+  color: var(--color-text-white);
+  cursor: pointer;
+  font-size: 13px;
+  transition: var(--transition);
+}
+
+.downloadBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

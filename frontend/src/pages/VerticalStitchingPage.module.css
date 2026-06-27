@@ -1,0 +1,208 @@
+/* VerticalStitchingPage — building picker for vertical floor stitching */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f0f2f5;
+  font-family: inherit;
+}
+
+/* ===================== Dark Header ===================== */
+.darkHeader {
+  background: #1a1a1a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.875rem 1.5rem;
+  flex-shrink: 0;
+}
+.darkHeaderLabel {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #d1d5db;
+}
+.darkHeaderClose {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem;
+  transition: color 0.15s;
+}
+.darkHeaderClose:hover { color: #fff; }
+
+/* ===================== Content ===================== */
+.content {
+  padding: 2rem;
+  color: #1a1a1a;
+}
+.inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.pageHeader { margin-bottom: 1.5rem; }
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: #1a1a1a;
+}
+.subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+/* ===================== States ===================== */
+.stateMsg {
+  padding: 2rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+.stateError { color: #ef4444; }
+
+/* ===================== Building List ===================== */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.card:hover {
+  border-color: #ff5500;
+  box-shadow: 0 2px 8px rgba(255, 85, 0, 0.12);
+}
+.cardDisabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.cardDisabled:hover {
+  border-color: #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.cardIcon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff6f3;
+  color: #ff5500;
+  border: 1px solid rgba(255, 85, 0, 0.25);
+}
+
+.cardMain {
+  flex: 1;
+  min-width: 0;
+}
+.cardName {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1a1a1a;
+}
+.cardCode {
+  font-size: 0.8125rem;
+  color: #9ca3af;
+  margin-top: 0.125rem;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.floorsBadge {
+  font-size: 0.8125rem;
+  background: #f0f2f5;
+  border: 1px solid #e5e7eb;
+  padding: 0.125rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.openHint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #ff5500;
+  white-space: nowrap;
+}
+.needHint {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+/* ===================== Empty State ===================== */
+.emptyState {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.emptyIcon { color: #d1d5db; margin-bottom: 1rem; }
+.emptyTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: #1a1a1a;
+}
+.emptyText {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 1.5rem;
+  max-width: 380px;
+  line-height: 1.5;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background: #ff5500;
+  color: #fff;
+  border: 1px solid #ff5500;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btnPrimary:hover { background: #e04b00; border-color: #e04b00; }

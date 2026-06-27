@@ -1,0 +1,142 @@
+.bottomBar {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background: var(--color-white);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05); /* Soft premium shadow */
+  height: 64px;
+  flex-shrink: 0;
+  z-index: 10;
+  position: relative;
+}
+
+.centerControls {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.fieldGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f0f3f5; /* Darker, slightly cool gray */
+  padding: 8px 20px;
+  border-radius: 0;
+  border: 1px solid #e0e4e8;
+  transition: all 0.2s ease;
+}
+
+.fieldGroup:hover {
+  border-color: #d1d5db;
+  background: #e9ecef;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4b5563; /* Darker gray for label */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  padding: 2px 0;
+  min-width: 160px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.select:focus {
+  color: var(--color-orange);
+}
+
+.line {
+  flex-shrink: 0;
+  width: 32px;
+  height: 2px;
+  background-image: linear-gradient(to right, #d1d5db 50%, transparent 50%);
+  background-size: 8px 100%;
+}
+
+.swapBtn {
+  background: #f8fafc;
+  color: #4b5563; /* Darker icon */
+  border: 1px solid #cbd5e1; /* Clearer border */
+  border-radius: 0;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.swapBtn:hover {
+  background: #111;
+  color: var(--color-white);
+  border-color: #111;
+  transform: rotate(180deg) scale(1.05);
+}
+
+.btnBack {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 120px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  transition: background 0.15s ease;
+}
+
+.btnBack:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnBack:hover:not(:disabled) {
+  background: var(--color-grey-dark);
+}
+
+.btnNext {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  background: var(--color-orange);
+  color: #fff;
+  transition: background 0.15s ease;
+}
+
+.btnNext:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnNext:hover:not(:disabled) {
+  background: var(--color-orange-hover);
+}

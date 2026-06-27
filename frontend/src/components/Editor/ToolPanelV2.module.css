@@ -1,0 +1,162 @@
+.panel {
+  width: 300px;
+  flex-shrink: 0;
+  background: #0d0d0d;
+  border-left: 1px solid #1a1a1a;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  flex: 1;
+  padding: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 16px 12px;
+}
+
+.sectionTitle {
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 12px 16px 8px;
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toolBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 2px solid transparent;
+  background: #1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 0;
+  transition: border-color 0.15s;
+  outline: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  text-align: left;
+}
+
+.toolBtn:hover {
+  background: #222;
+}
+
+.toolBtnActive {
+  border-color: #FF5722;
+  color: #FF5722;
+}
+
+.toolIcon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a2a2a;
+  border-radius: 0;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.toolBtnActive .toolIcon {
+  background: #FF4500;
+  color: #000000;
+}
+
+.toolLabel {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+}
+
+.sectionDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 12px 16px;
+}
+
+/* Slider */
+.sliderLabel {
+  
+  font-size: 11px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 12px 16px 8px;
+  margin: 0;
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sliderInput {
+  flex: 1;
+  height: 3px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #333;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  margin: 8px 0;
+}
+
+.sliderInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 18px;
+  background: #999;
+  border-radius: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.sliderInput::-moz-range-thumb {
+  width: 12px;
+  height: 18px;
+  background: #999;
+  border-radius: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.sliderInput::-moz-range-track {
+  height: 3px;
+  background: #333;
+  border-radius: 0;
+  border: none;
+}
+
+.sliderValue {
+  
+  font-size: 13px;
+  color: #666;
+  min-width: 40px;
+  text-align: right;
+  flex-shrink: 0;
+}

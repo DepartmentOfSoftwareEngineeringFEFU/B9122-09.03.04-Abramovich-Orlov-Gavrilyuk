@@ -1,0 +1,136 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+
+/* ─── Header ─── */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px;
+  height: 56px;
+  background: #0E0E0E;
+  flex-shrink: 0;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.15s;
+}
+
+.backBtn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.headerSeparator {
+  color: #6B6B6B;
+  font-size: 14px;
+}
+
+.headerTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+/* ─── Body ─── */
+.body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ─── Left panel ─── */
+.leftPanel {
+  width: 280px;
+  flex-shrink: 0;
+  background: #FFFFFF;
+  border-right: 1px solid #E5E5E5;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 16px;
+  gap: 16px;
+}
+
+.routeSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.selectorSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.minimapSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ─── Right panel (3D viewer) ─── */
+.rightPanel {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  background: #FFFFFF;
+}
+
+.viewerContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #888888;
+  font-size: 16px;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #888888;
+  font-size: 16px;
+  text-align: center;
+  padding: 24px;
+}
+
+/* ─── Toast ─── */
+.toast {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(220, 53, 69, 0.92);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 0;
+  font-size: 14px;
+  z-index: 10;
+  pointer-events: none;
+  white-space: nowrap;
+}
+

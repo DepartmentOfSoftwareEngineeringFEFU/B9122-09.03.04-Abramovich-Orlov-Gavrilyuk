@@ -1,0 +1,113 @@
+/* Stitching Editor Layout - Dark Theme */
+.stitchingEditor {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: #0A0A0A;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.editorMain {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.stitchingCanvasArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #1A1A1A;
+}
+
+.undoRedoBar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  gap: 4px;
+  z-index: 10;
+}
+
+.undoRedoBtn {
+  background: #0A0A0A;
+  border: 1px solid #27272a;
+  color: #71717a;
+  padding: 8px 12px;
+  
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.undoRedoBtn:hover:not(:disabled) {
+  color: white;
+  border-color: #FF4500;
+}
+
+.undoRedoBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.stitchingFooter {
+  height: 80px;
+  background: #0A0A0A;
+  border-top: 1px solid #27272a;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 30;
+  flex-shrink: 0;
+}
+
+.btnSecondary {
+  padding: 12px 40px;
+  
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btnSecondary:hover {
+  background: #3f3f46;
+}
+
+.btnPrimary {
+  padding: 12px 40px;
+  
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #FF4500;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  background: #E03E00;
+}
+
+.btnPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+

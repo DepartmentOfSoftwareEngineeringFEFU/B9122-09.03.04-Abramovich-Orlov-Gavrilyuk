@@ -1,0 +1,205 @@
+.step {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  background: #e4e4e7;
+}
+
+.canvasArea {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+}
+
+.gridBg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-color: #1a1a1a;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+.canvasBox {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 80vh;
+  background: #000;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+}
+
+/* Инвертированная маска — рендерится через CSS-инверсию canvas. */
+.inverted {
+  filter: invert(1);
+}
+
+/* Param rows (opacity slider) — mirrors StepWallEditor */
+.paramSection {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.paramRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.paramLabel {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sliderInput {
+  flex: 1;
+  height: 1px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #333;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  margin: 8px 0;
+}
+
+.sliderInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 24px;
+  background: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s;
+}
+
+.sliderInput::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.sliderInput::-moz-range-thumb {
+  width: 16px;
+  height: 24px;
+  background: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.sliderInput::-moz-range-track {
+  height: 1px;
+  background: #333;
+  border-radius: 0;
+  border: none;
+}
+
+.sliderValue {
+  font-size: 13px;
+  color: #666;
+  min-width: 40px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* View radios */
+.viewOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  color: #aaa;
+  padding: 10px 12px;
+  border-radius: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.viewOption:hover:not(:disabled) {
+  background: #1a1a1a;
+}
+
+.viewOption:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.viewOptionActive {
+  border-color: #ff5722;
+  color: #ff5722;
+}
+
+.radioMark {
+  font-size: 16px;
+  line-height: 1;
+  width: 18px;
+  display: inline-block;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Hint text under the tool buttons */
+.hint {
+  padding: 8px 16px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Status counter "Опорные точки: N/10" */
+.statusSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.statusLabel {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.statusValue {
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff5722;
+}
+
+.statusValueLow {
+  color: #888;
+}
+
+.statusHint {
+  padding: 6px 16px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  color: #c2410c;
+}

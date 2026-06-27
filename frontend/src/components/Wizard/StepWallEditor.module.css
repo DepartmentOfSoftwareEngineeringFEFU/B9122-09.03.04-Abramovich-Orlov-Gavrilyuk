@@ -1,0 +1,288 @@
+.step {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  background: #e4e4e7;
+}
+
+.canvasArea {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+}
+
+.gridBg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-color: #1a1a1a;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+.canvasBox {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 80vh;
+  background: #000;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+  border: 1px solid #3f3f46;
+  overflow: hidden;
+}
+
+/* Panel sections rendered manually */
+.panelSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 16px 12px;
+}
+
+.sectionTitle {
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 11px;
+  font-weight: 400;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 12px 16px 8px;
+  margin: 0;
+}
+
+.sectionDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 12px 16px;
+}
+
+.toolBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 2px solid transparent;
+  background: #1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 0;
+  transition: border-color 0.15s;
+  outline: none;
+  
+  font-size: 15px;
+  text-align: left;
+}
+
+.toolBtn:hover {
+  background: #222;
+}
+
+.toolBtnActive {
+  border-color: #FF5722;
+  color: #FF5722;
+}
+
+.toolBtnIcon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2a2a2a;
+  border-radius: 0;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.toolBtnActive .toolBtnIcon {
+  background: #FF5722;
+  color: #ffffff;
+}
+
+/* Inline param (brush size under wall button) */
+.inlineParam {
+  margin-left: 16px;
+  padding: 12px 8px 12px 16px;
+  border-left: 2px solid #FF4500;
+  background: rgba(255, 69, 0, 0.05);
+}
+
+.inlineParamLabel {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  color: #888;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Eraser submodes */
+.subTools {
+  margin-left: 16px;
+  padding: 10px 0 10px 16px;
+  border-left: 2px solid #FF4500;
+  background: rgba(255, 69, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subTool {
+  background: transparent;
+  border: 1px solid #2a2a2a;
+  color: #888;
+  padding: 8px 12px;
+  border-radius: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.subToolActive {
+  border-color: #FF5722;
+  color: #FF5722;
+}
+
+.radioMark {
+  font-size: 18px;
+  line-height: 1;
+  width: 20px;
+  display: inline-block;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Param rows (mask params + overlay) */
+.paramSection {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.paramRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.paramLabel {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sliderInput {
+  flex: 1;
+  height: 1px;
+  appearance: none;
+  -webkit-appearance: none;
+  background: #333;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  margin: 8px 0;
+}
+
+.sliderInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 24px;
+  background: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s;
+}
+
+.sliderInput::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.sliderInput::-moz-range-thumb {
+  width: 16px;
+  height: 24px;
+  background: #fff;
+  border-radius: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.sliderInput::-moz-range-track {
+  height: 1px;
+  background: #333;
+  border-radius: 0;
+  border: none;
+}
+
+.sliderValue {
+  
+  font-size: 13px;
+  color: #666;
+  min-width: 40px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.previewSpinner {
+  
+  font-size: 11px;
+  color: #FF5722;
+  letter-spacing: 0.05em;
+}
+
+/* Toggle */
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.squareToggle {
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  border: 2px solid #444;
+  border-radius: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.squareToggleActive {
+  background: #FF5722;
+  border-color: #FF5722;
+}
+
+.brushActive,
+.brushActive * {
+  cursor: none !important;
+}
+
+.brushCursor {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 87, 34, 0.9);
+  background: rgba(255, 87, 34, 0.1);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 20;
+}

@@ -1,0 +1,22 @@
+/* Stitching Sidebar - Dark Theme */
+.stitchingSidebar {
+  width: 320px;
+  background: #0A0A0A;
+  border-left: 1px solid #27272a;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.stitchingSidebar > * {
+  padding: 24px;
+  border-bottom: 1px solid #27272a;
+}
+
+.stitchingSidebar > *:last-child {
+  border-bottom: none;
+}
+

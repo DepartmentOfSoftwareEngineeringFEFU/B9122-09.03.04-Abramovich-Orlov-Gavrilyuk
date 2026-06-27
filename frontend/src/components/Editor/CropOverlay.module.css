@@ -1,0 +1,36 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.dimTop,
+.dimBottom,
+.dimLeft,
+.dimRight {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.cropRect {
+  position: absolute;
+  border: 2px dashed #FF4500;
+  pointer-events: none;
+}
+
+.handle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #FF4500;
+  pointer-events: all;
+  cursor: nwse-resize;
+}
+
+.interior {
+  position: absolute;
+  inset: 12px;
+  cursor: move;
+  pointer-events: all;
+}

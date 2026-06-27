@@ -1,0 +1,126 @@
+/* Step3 — local styles for sliders / parameter rows / divider chips */
+
+.sectionDivider {
+  height: 1px;
+  background: #e1e4e8;
+  margin: 1rem 0 0.875rem;
+}
+
+.paramSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.paramRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.inlineParam {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: -0.125rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #ffffff;
+  border: 1px solid #e1e4e8;
+}
+
+.paramLabel {
+  font-size: 0.75rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slider {
+  flex: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 4px;
+  background: #e1e4e8;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #ff6b1f;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #ff6b1f;
+}
+
+.slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #ff6b1f;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px #ff6b1f;
+}
+
+.sliderValue {
+  font-size: 0.75rem;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+  min-width: 42px;
+  text-align: right;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-bottom: 0.25rem;
+}
+
+.toggleRow input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #ff6b1f;
+}
+
+.brushActive,
+.brushActive * {
+  cursor: none !important;
+}
+
+.brushCursor {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 107, 31, 0.9);
+  background: rgba(255, 107, 31, 0.08);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.refreshChip {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  background: rgba(15, 23, 42, 0.78);
+  color: #ffffff;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  z-index: 5;
+}

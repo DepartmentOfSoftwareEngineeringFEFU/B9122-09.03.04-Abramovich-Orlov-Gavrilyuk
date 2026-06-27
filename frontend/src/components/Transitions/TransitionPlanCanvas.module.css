@@ -1,0 +1,92 @@
+.wrapper {
+  position: relative;
+  display: block;
+  background: var(--color-white);
+  border: 2px solid var(--color-black);
+  box-shadow: var(--shadow-hard);
+  user-select: none;
+  cursor: grab;
+}
+
+.wrapper:active {
+  cursor: grabbing;
+}
+
+.wrapperCrosshair {
+  cursor: crosshair;
+}
+
+.wrapperDefault {
+  cursor: default;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 200px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.markersLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.marker {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--color-white);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s;
+}
+
+.marker:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.markerFrom {
+  background: var(--color-orange);
+}
+
+.markerTo {
+  background: var(--color-grey-medium);
+}
+
+.markerDelete {
+  pointer-events: all;
+  cursor: pointer;
+  border-color: #dc2626;
+  outline: 2px solid transparent;
+  transition: outline 0.1s, background 0.15s;
+}
+
+.markerDelete:hover {
+  background: #dc2626 !important;
+  outline: 2px solid #dc2626;
+}
+
+.markerLabel {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  font-weight: 700;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--color-white);
+  background: var(--color-black);
+  padding: 1px 5px;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}

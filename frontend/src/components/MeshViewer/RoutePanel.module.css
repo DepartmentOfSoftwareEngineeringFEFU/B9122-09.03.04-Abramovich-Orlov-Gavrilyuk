@@ -1,0 +1,155 @@
+.panel {
+  width: 300px;
+  flex-shrink: 0;
+  background: #0d0d0d;
+  border-left: 1px solid #1a1a1a;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-bottom: 24px;
+}
+
+.sectionTitle {
+  font-family: 'Courier New', 'Consolas', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 16px 12px;
+  margin: 0;
+}
+
+.fieldGroup {
+  padding: 0 16px 12px;
+}
+
+.fieldLabel {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.select {
+  width: 100%;
+  padding: 10px 12px;
+  background: #1a1a1a;
+  border: 2px solid transparent;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  transition: border-color 0.15s;
+}
+
+.select:focus {
+  border-color: #FF4500;
+}
+
+.select option {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.findBtn {
+  margin: 8px 16px 0;
+  padding: 14px 16px;
+  background: #FF4500;
+  border: none;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background 0.15s;
+}
+
+.findBtn:hover:not(:disabled) {
+  background: #E03E00;
+}
+
+.findBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 16px 16px;
+}
+
+.routeInfo {
+  padding: 0 16px;
+}
+
+.routeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.routeLabel {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+  color: #666;
+}
+
+.routeValue {
+  
+  font-size: 14px;
+  color: #FF4500;
+  font-weight: 700;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metricValue {
+  
+  font-size: 28px;
+  font-weight: 700;
+  color: #FF4500;
+}
+
+.metricLabel {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 11px;
+  color: #666;
+}
+
+.errorMsg {
+  padding: 12px 16px;
+  color: #F44336;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+}

@@ -1,0 +1,130 @@
+/* Cross-floor 3D routes view (subfeature D). Restyled to the project design
+   language (mirrors FloorViewerPage / screenshot 2): WHITE controls panel on the
+   left, big 3D viewer on the right, square corners, orange #F97316 accent. The
+   3D model itself is left untouched (grey) — only the chrome is redesigned. */
+
+.wrap {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  background: #ffffff;
+}
+
+/* ── Left controls panel (white, like FloorViewer's left panel) ─────────────── */
+.panel {
+  width: 280px;
+  flex-shrink: 0;
+  background: #ffffff;
+  border-right: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 16px;
+  gap: 16px;
+}
+
+/* ── 3D viewer fills the rest (big) ─────────────────────────────────────────── */
+.viewer {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  background: #ffffff;
+}
+
+/* ── Floor layers: a checkbox row per floor (number + on-route status) ───────── */
+.layers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.layersTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #888888;
+  padding-left: 2px;
+}
+
+.layerList {
+  display: flex;
+  flex-direction: column;
+}
+
+.layerRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 4px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.layerRow:last-child {
+  border-bottom: none;
+}
+
+.layerRowDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Explicitly styled (not accent-color) so the checked box is always the orange
+   brand colour with a white tick — square, matching the reference. */
+.layerCheck {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin: 0;
+  background: #ffffff;
+  border: 1.5px solid #c4c4c4;
+  border-radius: 0;
+  cursor: pointer;
+  position: relative;
+}
+
+.layerCheck:checked {
+  background: #f97316;
+  border-color: #f97316;
+}
+
+.layerCheck:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.layerRowDisabled .layerCheck {
+  cursor: not-allowed;
+}
+
+.layerNum {
+  min-width: 18px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0e0e0e;
+}
+
+.layerStatus {
+  font-size: 13px;
+  color: #aaaaaa;
+}
+
+.layerStatusOn {
+  color: #555555;
+}
+
+.note {
+  padding: 24px;
+  color: #888888;
+  font-size: 14px;
+}

@@ -1,0 +1,92 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sidebarHeader {
+  padding: 12px 16px;
+  border-bottom: 2px solid var(--color-black);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--color-grey-bg);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebarCount {
+  background: var(--color-black);
+  color: var(--color-white);
+  font-size: 10px;
+  padding: 2px 7px;
+  
+}
+
+.list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 0;
+}
+
+.emptyList {
+  padding: 24px 16px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  text-align: center;
+  
+}
+
+.row {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--color-grey-bg);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: background 0.12s, border-left-color 0.12s;
+}
+
+.row:hover {
+  background: var(--color-grey-bg);
+}
+
+.rowActive {
+  border-left-color: var(--color-orange);
+  background: #fff7f5;
+}
+
+.rowName {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rowActiveText {
+  font-weight: 700;
+  color: var(--color-orange);
+}
+
+.badge {
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-size: 10px;
+  font-weight: 700;
+  
+  min-width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  flex-shrink: 0;
+}

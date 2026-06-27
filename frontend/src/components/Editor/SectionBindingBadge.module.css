@@ -1,0 +1,67 @@
+.badge {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 200;
+  background: rgba(20, 20, 20, 0.92);
+  border: 1px solid #FF5722;
+  padding: 10px 14px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 260px;
+  max-width: 360px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.label {
+  font-size: 10px;
+  color: #9E9E9E;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.statusBound {
+  font-size: 12px;
+  color: #FF5722;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.statusUnbound {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.statusNoFloor {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.actionBtn {
+  background: transparent;
+  border: 1px solid #FF5722;
+  color: #FF5722;
+  
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  cursor: pointer;
+  align-self: flex-start;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1.6;
+}
+
+.actionBtn:hover {
+  background: #FF5722;
+  color: #fff;
+}

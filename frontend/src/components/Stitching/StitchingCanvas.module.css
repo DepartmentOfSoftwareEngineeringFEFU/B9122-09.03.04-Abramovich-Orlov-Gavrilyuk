@@ -1,0 +1,39 @@
+/* Stitching Canvas Container - Dark Theme */
+.stitchingCanvasContainer {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid background */
+.stitchingCanvasContainer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.canvasHint {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #0A0A0A;
+  color: #71717a;
+  border: 1px solid #27272a;
+  padding: 8px 16px;
+  
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  z-index: 10;
+}
+

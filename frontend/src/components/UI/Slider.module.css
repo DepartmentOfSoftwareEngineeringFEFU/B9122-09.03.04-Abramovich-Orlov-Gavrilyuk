@@ -1,0 +1,42 @@
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.track {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: var(--color-white);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.track::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-black);
+  cursor: pointer;
+}
+
+.track::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-black);
+  cursor: pointer;
+  border: none;
+}
+
+.value {
+  color: var(--color-white);
+  font-size: 14px;
+  min-width: 40px;
+  text-align: right;
+}

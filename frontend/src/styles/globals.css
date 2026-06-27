@@ -1,0 +1,53 @@
+/* === Design Tokens === */
+:root {
+  --color-black: #0A0A0A;
+  --color-white: #FFFFFF;
+  --color-orange: #FF4500;
+  --color-orange-hover: #E03E00;
+  --color-grey-bg: #E5E5E5;
+  --color-grey-dark: #1A1A1A;
+  --color-grey-medium: #9E9E9E;
+  --color-grey-light: #F5F5F5;
+  --color-sidebar-bg: #FFFFFF;
+  --color-header-bg: #0A0A0A;
+  --color-text: #0A0A0A;
+  --color-text-primary: #0A0A0A;
+  --color-text-white: #FFFFFF;
+  --color-text-muted: #9E9E9E;
+  --color-error: #dc2626;
+  --color-panel-dark: #1A1A1A;
+  --border-radius: 0px;
+  --transition: all 0.15s ease;
+  --shadow-hard: 4px 4px 0px 0px rgba(0,0,0,1);
+  --shadow-hard-orange: 4px 4px 0px 0px rgba(255,69,0,1);
+}
+
+/* === Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  background: var(--color-white);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}

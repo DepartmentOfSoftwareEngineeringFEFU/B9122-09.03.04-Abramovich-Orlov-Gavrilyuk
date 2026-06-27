@@ -1,0 +1,42 @@
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px;
+  color: var(--color-text-muted);
+}
+
+.emptyIcon {
+  width: 56px;
+  height: 56px;
+  border: 2px solid var(--color-grey-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyText {
+  font-size: 14px;
+}
+
+.single {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  background: var(--color-grey-dark);
+}
+
+.singlePreview {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px;
+}

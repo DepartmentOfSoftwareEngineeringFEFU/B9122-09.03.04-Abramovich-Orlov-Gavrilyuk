@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  flex-shrink: 0;
+  background: var(--color-orange);
+}
+
+.brand {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-black);
+  
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.userBtn {
+  height: 100%;
+  padding: 0 32px;
+  background: var(--color-black);
+  color: var(--color-white);
+  
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.userBtn:hover {
+  background: var(--color-grey-dark);
+}

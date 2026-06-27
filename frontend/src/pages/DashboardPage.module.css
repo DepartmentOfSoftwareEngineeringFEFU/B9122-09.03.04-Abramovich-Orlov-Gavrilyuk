@@ -1,0 +1,261 @@
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 14px;
+  
+  color: var(--color-text-muted);
+}
+
+/* Empty state */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: var(--color-grey-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.emptyPattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#A3A3A3 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.4;
+}
+
+.emptyBox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px;
+  background: var(--color-white);
+  border: 2px solid var(--color-black);
+  box-shadow: var(--shadow-hard);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  gap: 12px;
+}
+
+.emptyIcon {
+  color: #D0D0D0;
+  margin-bottom: 8px;
+}
+
+.emptyTitle {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-black);
+}
+
+.emptyDivider {
+  width: 48px;
+  height: 4px;
+  background: var(--color-orange);
+}
+
+.emptyMsg {
+  font-size: 12px;
+  
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.startBtn {
+  width: 100%;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 16px 32px;
+  font-weight: 700;
+  
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 8px;
+}
+
+.startBtn:hover {
+  background: var(--color-orange);
+}
+
+/* Files state */
+.page {
+  padding: 32px;
+  background: var(--color-grey-bg);
+  min-height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  outline: none;
+}
+
+.card:focus .preview,
+.card:hover .preview {
+  border-color: var(--color-orange);
+}
+
+.preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--color-grey-medium);
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.previewImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #e5e5e5;
+}
+
+.previewPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #888 0px,
+    #888 1px,
+    #999 1px,
+    #999 10px
+  );
+  opacity: 0.4;
+}
+
+.deleteBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: var(--color-orange);
+  border: none;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.card:hover .deleteBtn {
+  opacity: 1;
+}
+
+.cardName {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardMeta {
+  font-size: 11px;
+  
+  color: var(--color-text-muted);
+}
+
+.error {
+  font-size: 13px;
+  color: var(--color-error);
+  margin-bottom: 16px;
+
+}
+
+/* Confirmation dialog */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.confirmDialog {
+  background: var(--color-white);
+  border: 2px solid var(--color-black);
+  box-shadow: var(--shadow-hard);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 360px;
+  width: 100%;
+}
+
+.confirmText {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-black);
+  text-align: center;
+}
+
+.confirmActions {
+  display: flex;
+  gap: 12px;
+}
+
+.confirmYes,
+.confirmNo {
+  flex: 1;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid var(--color-black);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.confirmYes {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.confirmYes:hover {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+}
+
+.confirmNo {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.confirmNo:hover {
+  background: var(--color-grey-medium);
+}

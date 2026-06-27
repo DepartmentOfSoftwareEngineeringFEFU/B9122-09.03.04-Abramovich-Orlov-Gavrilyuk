@@ -1,0 +1,196 @@
+/* Layer Panel - Dark Theme */
+.layerPanel {
+  margin-bottom: 40px;
+}
+
+.sectionHeader {
+  
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #71717a;
+  margin-bottom: 16px;
+}
+
+.layerList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.layerCard {
+  background: #1e1e1e;
+  border: 1px solid transparent;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.layerCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.layerCardLeft {
+  display: flex;
+  align-items: center;
+}
+
+.opacityLabel {
+  display: flex;
+  justify-content: space-between;
+  
+  font-size: 12px;
+  color: #71717a;
+  margin-bottom: 8px;
+}
+
+.opacityValue {
+  color: white;
+}
+
+.sliderContainer {
+  position: relative;
+  height: 2px;
+  background: #3f3f46;
+  cursor: pointer;
+}
+
+.sliderTrack {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #FF4500;
+}
+
+.sliderThumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 16px;
+  background: white;
+  pointer-events: none;
+}
+
+
+.layerCard:hover {
+  background: #2a2a2a;
+}
+
+.layerCard.active {
+  border-color: #FF4500;
+}
+
+.layerColor {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.layerInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.layerName {
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.layerSize {
+  
+  font-size: 10px;
+  color: #71717a;
+  margin-top: 4px;
+}
+
+.layerControls {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  color: #71717a;
+}
+
+.layerControls button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.layerControls button:hover:not(:disabled) {
+  color: white;
+}
+
+.layerControls button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.layerMaskControls {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #27272a;
+}
+
+.layerMaskControls .opacityLabel {
+  display: flex;
+  justify-content: space-between;
+  
+  font-size: 12px;
+  color: #71717a;
+  margin-bottom: 8px;
+}
+
+.layerMaskControls .opacityValue {
+  color: white;
+}
+
+.layerMaskControls .sliderContainer {
+  position: relative;
+  height: 2px;
+  background: #3f3f46;
+  cursor: pointer;
+}
+
+.layerMaskControls .sliderTrack {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #FF4500;
+}
+
+.layerMaskControls .sliderThumb {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 16px;
+  background: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.layerMaskControls .sliderThumb:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+

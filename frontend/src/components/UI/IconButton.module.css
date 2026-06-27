@@ -1,0 +1,25 @@
+.iconBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--color-grey-medium);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--color-white);
+}
+
+.iconBtn:hover {
+  background: var(--color-orange-hover);
+}
+
+.iconBtn.active {
+  background: var(--color-orange);
+}
+
+.iconBtn.inactive {
+  background: var(--color-grey-medium);
+}

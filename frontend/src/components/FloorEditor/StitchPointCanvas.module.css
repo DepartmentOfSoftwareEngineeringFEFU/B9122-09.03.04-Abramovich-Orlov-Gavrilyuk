@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+.container.deleting {
+  cursor: not-allowed;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
